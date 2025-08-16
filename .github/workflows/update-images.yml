@@ -44,7 +44,7 @@ jobs:
           if [ -f data/images.json ]; then
             git add data/images.json
             git diff --staged --quiet || git commit -m "데이터 업데이트"
-            git push
+            git push --rebase
           else
             echo "어라? data/images.json 파일이 없어서 커밋을 중지합니다."
           fi
